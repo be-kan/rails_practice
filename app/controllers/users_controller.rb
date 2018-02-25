@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save!
+    redirect_to '/users', notice: '名前を登録しました。'
   end
 
   private
